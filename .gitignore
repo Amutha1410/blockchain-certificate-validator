@@ -1,54 +1,69 @@
+```gitignore
+# Environment variables and secrets
 .env
+.env.*
+
+# Node.js dependencies and build output
 node_modules/
+frontend/dist/
+
+# Python cache and virtual environments
 __pycache__/
-uploads/
-*.pyc
-runs/
-*.png
-*.jpg
-*.jpeg
-yolo11n-cls.pt
-yolo11s-cls.pt
-certificate_dataset/
+*.py[cod]
 venv/
 .venv/
 **/venv/
 **/.venv/
-.env
-node_modules/
-__pycache__/
+
+# Temporary uploads and generated files
 uploads/
-*.pyc
-
 runs/
+*.log
+
+# Training datasets and reports
 certificate_dataset/
+near_duplicate_report.csv
 
-*.png
-*.jpg
-*.jpeg
-
-*.pth
-*.pkl
+# Backup model files only
 *_backup.pt
 *_before_*.pt
+*_backup.pth
 
+# Backup application and test files
 backend/app_backup*.py
 backend/app_before_*.py
 backend/app_yolo_backup.py
-
 backend/test_*.py
 backend/train_*.py
+frontend/src/pages/*_backup.jsx
+frontend/App_backup.css
+frontend/src/App_backup.css
 
-backend/near_duplicate_report.csv
-
-**/venv/
-**/.venv/
-backend/models/best.pt
+# Unnecessary temporary files
 backend/cd
 backend/uploadcertificate.jsx
-backend/routes/
-frontend/src/pages/*_backup.jsx
-frontend/src/App_backup.css
-frontend/src/App.cssv
 frontend/test_v12.py
 frontend/{predicted}
+```
+# Temporary model analysis images
+/dataset_sample_check.png
+/dataset_sample_check2.png
+/five_pairs_check.png
+/pair_1_9_check.png
+/pair_zoom1.png
+/val_pairs_check.png
+
+# Extra model files not used by the active app
+/backend/resnet18_certificate.pth
+/backend/models/best.pt
+/backend/ml-model/certificate_model.pkl
+/backend/yolo11n-cls.pt
+/backend/yolo11s-cls.pt
+/yolo11n-cls.pt
+/yolo11s-cls.pt
+/frontend/yolo11s-cls.pt
+
+# Temporary CSS file
+/frontend/src/App.cssv
+/backend/pair_comparisons/
+/app.py
